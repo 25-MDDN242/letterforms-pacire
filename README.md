@@ -6,6 +6,7 @@
 ## Reece Pacia
 ## Student ID: 300537097
 
+For this project I had decided to create my parametrics with a design of using only 3 triangles. I research a lot of different font styles before deciding to do a 3 triangle design. As we only start with using A, B and C I started wuth using the 3 triangles of A. How I managed to format my parameters is by having a array of data points each having the 6 points to create one of the 3 triangles.
 
 ### Links used through project:
 * https://color.adobe.com/-leveling-color-theme-19902787/
