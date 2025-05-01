@@ -89,14 +89,3 @@ function keyTyped() {
     saveBlocksImages(true);
   }
 }
-
-  // determine parameters for second circle
-  // let size2 = letterData["size"];
-  // let pos2x = posx + letterData["offsetx"];
-  // let pos2y = posy + letterData["offsety"];
-
-  // draw two circles
-  // fill(darkGreen);
-  // ellipse(posx, posy, 150, 150);
-  // fill(lightGreen);
-  // ellipse(pos2x, pos2y, size2, size2);
