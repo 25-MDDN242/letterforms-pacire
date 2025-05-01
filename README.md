@@ -11,3 +11,4 @@
 * https://color.adobe.com/-leveling-color-theme-19902787/
 * https://www.color-hex.com/color-palette/115761
 * https://chatgpt.com/?model=auto
+* https://copilot.microsoft.com/chats/b6Dt4VX81ZHmQzFnxSGos
