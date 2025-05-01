@@ -12,6 +12,7 @@ const canvasHeight = 500;
  *
  */
 
+// The points for the 3 triangles
 const letterA = {
   triangles: [
     [-50, -50,  50, -50,   0, -125],
@@ -49,8 +50,6 @@ function setup () {
 
   // color/stroke setup
   noStroke();
-  // stroke(strokeColor);
-  // strokeWeight(4);
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -71,10 +70,8 @@ function draw () {
 }
 
 function drawLetter(posx, posy, letterData) {
-  //let triangle = letterData["letter"];
-  // let eyeposX = letterData["eyePositionX"];
-  // let eyeposY = letterData["eyePositionY"];
 
+  // Creating the 3 triangles to form the letters
   fill(darkGreen);
   for (let t of letterData.triangles) {
     triangle(posx + t[0], posy + t[1],
