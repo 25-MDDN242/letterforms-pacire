@@ -5,3 +5,9 @@
 ## Tri Sigil
 ## Reece Pacia
 ## Student ID: 300537097
+
+
+### Links used through project:
+* https://color.adobe.com/-leveling-color-theme-19902787/
+* https://www.color-hex.com/color-palette/115761
+* https://chatgpt.com/?model=auto
