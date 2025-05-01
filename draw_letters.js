@@ -15,6 +15,8 @@ const strokeColor  = "#0a2d27";
  * following bounding box guideline:
  * from (0,0) to (100, 200)
  */
+
+// Help of ChatGPT and Copilot to create this code
 function drawLetter(letterData) {
 
   // Calling the two variables from letter.js
