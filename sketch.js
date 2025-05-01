@@ -13,27 +13,33 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 80,
-  "offsetx": 0,
-  "offsety": 35
+  triangles: [
+    [-50, -50,  50, -50,   0, -125],
+    [-100, 25,   0, -15, -50, -50],
+    [0, -15, 100, 25, 50, -50]
+  ]
 }
 
 const letterB = {
-  "size": 150,
-  "offsetx": 0,
-  "offsety": -145
+  triangles: [
+    [-50, -50,  0, 25,  0, -125],
+    [100, -75, 0, -125, 10, -50],
+    [10, -50, 0, 25, 100, -25]
+  ]
 }
 
 const letterC = {
-  "size": 100,
-  "offsetx": 30,
-  "offsety": 0
+  triangles: [
+    [-50, -50,  0, 25,  0, -125],
+    [100, -75, 0, -125, 0, -100],
+    [0, 0, 0, 25, 100, -25]
+  ]
 }
 
 const backgroundColor  = "#acf2e7";
 
 const darkGreen  = "#26b29d";
-const lightGreen  = "#30dfc4";
+const lightGreen  = "#30dfc4";  
 const strokeColor  = "#0a2d27";
 
 function setup () {
@@ -42,8 +48,9 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
+  noStroke();
+  // stroke(strokeColor);
+  // strokeWeight(4);
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -64,16 +71,17 @@ function draw () {
 }
 
 function drawLetter(posx, posy, letterData) {
-  // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = posx + letterData["offsetx"];
-  let pos2y = posy + letterData["offsety"];
+  //let triangle = letterData["letter"];
+  // let eyeposX = letterData["eyePositionX"];
+  // let eyeposY = letterData["eyePositionY"];
 
-  // draw two circles
   fill(darkGreen);
-  ellipse(posx, posy, 150, 150);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+  for (let t of letterData.triangles) {
+    triangle(posx + t[0], posy + t[1],
+             posx + t[2], posy + t[3],
+             posx + t[4], posy + t[5]);
+  }
+
 }
 
 function keyTyped() {
@@ -84,3 +92,14 @@ function keyTyped() {
     saveBlocksImages(true);
   }
 }
+
+  // determine parameters for second circle
+  // let size2 = letterData["size"];
+  // let pos2x = posx + letterData["offsetx"];
+  // let pos2y = posy + letterData["offsety"];
+
+  // draw two circles
+  // fill(darkGreen);
+  // ellipse(posx, posy, 150, 150);
+  // fill(lightGreen);
+  // ellipse(pos2x, pos2y, size2, size2);
